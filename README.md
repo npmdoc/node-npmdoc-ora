@@ -1,11 +1,13 @@
 # api documentation for  [ora (v1.2.0)](https://github.com/sindresorhus/ora#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ora.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ora) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ora.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ora)
 #### Elegant terminal spinner
 
-[![NPM](https://nodei.co/npm/ora.png?downloads=true)](https://www.npmjs.com/package/ora)
+[![NPM](https://nodei.co/npm/ora.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ora)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ora/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-ora_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ora/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ora/build/screenCapture.buildCi.browser.apidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ora/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-ora/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ora/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-ora/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -16,7 +18,6 @@
 {
     "author": {
         "name": "Sindre Sorhus",
-        "email": "sindresorhus@gmail.com",
         "url": "sindresorhus.com"
     },
     "bugs": {
@@ -67,13 +68,11 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "sindresorhus",
-            "email": "sindresorhus@gmail.com"
+            "name": "sindresorhus"
         }
     ],
     "name": "ora",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sindresorhus/ora.git"
@@ -90,11 +89,25 @@
 # <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
 
 #### [module ora](#apidoc.module.ora)
+1.  [function <span class="apidocSignatureSpan"></span>ora (opts)](#apidoc.element.ora.ora)
 1.  [function <span class="apidocSignatureSpan">ora.</span>promise (action, options)](#apidoc.element.ora.promise)
+1.  [function <span class="apidocSignatureSpan">ora.</span>toString ()](#apidoc.element.ora.toString)
 
 
 
 # <a name="apidoc.module.ora"></a>[module ora](#apidoc.module.ora)
+
+#### <a name="apidoc.element.ora.ora"></a>[function <span class="apidocSignatureSpan"></span>ora (opts)](#apidoc.element.ora.ora)
+- description and source-code
+```javascript
+ora = function (opts) {
+	return new Ora(opts);
+}
+```
+- example usage
+```shell
+n/a
+```
 
 #### <a name="apidoc.element.ora.promise"></a>[function <span class="apidocSignatureSpan">ora.</span>promise (action, options)](#apidoc.element.ora.promise)
 - description and source-code
@@ -138,6 +151,18 @@ Starts a spinner for a promise. The spinner is stopped with '.succeed()' if the 
 
 Type: 'Promise'
 ...
+```
+
+#### <a name="apidoc.element.ora.toString"></a>[function <span class="apidocSignatureSpan">ora.</span>toString ()](#apidoc.element.ora.toString)
+- description and source-code
+```javascript
+toString = function () {
+    return toString;
+}
+```
+- example usage
+```shell
+n/a
 ```
 
 
