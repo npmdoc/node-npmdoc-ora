@@ -72,6 +72,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.ora.index">
+            function <span class="apidocSignatureSpan">ora.</span>index
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.ora.promise">
             function <span class="apidocSignatureSpan">ora.</span>promise
             <span class="apidocSignatureSpan">(action, options)</span>
@@ -79,11 +88,24 @@
 
         </li>
 
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ora.index">module ora.index</a><ol>
+
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.ora.toString">
-            function <span class="apidocSignatureSpan">ora.</span>toString
-            <span class="apidocSignatureSpan">()</span>
+            <a class="apidocElementLiA" href="#apidoc.element.ora.index.index">
+            function <span class="apidocSignatureSpan">ora.</span>index
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ora.index.promise">
+            function <span class="apidocSignatureSpan">ora.index.</span>promise
+            <span class="apidocSignatureSpan">(action, options)</span>
             </a>
 
         </li>
@@ -104,6 +126,21 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">ora = function (opts) {
+	return new Ora(opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ora.index" id="apidoc.element.ora.index">
+        function <span class="apidocSignatureSpan">ora.</span>index
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (opts) {
 	return new Ora(opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -157,18 +194,70 @@ Type: `Promise`
     </ul>
 
 
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ora.index" id="apidoc.module.ora.index">module ora.index</a></h1>
+
 
     <h2>
-        <a href="#apidoc.element.ora.toString" id="apidoc.element.ora.toString">
-        function <span class="apidocSignatureSpan">ora.</span>toString
-        <span class="apidocSignatureSpan">()</span>
+        <a href="#apidoc.element.ora.index.index" id="apidoc.element.ora.index.index">
+        function <span class="apidocSignatureSpan">ora.</span>index
+        <span class="apidocSignatureSpan">(opts)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return toString;
+    <li>description and source-code<pre class="apidocCodePre">index = function (opts) {
+	return new Ora(opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ora.index.promise" id="apidoc.element.ora.index.promise">
+        function <span class="apidocSignatureSpan">ora.index.</span>promise
+        <span class="apidocSignatureSpan">(action, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(action, options) =&#x3e; {
+	if (typeof action.then !== &#x27;function&#x27;) {
+		throw new TypeError(&#x27;Parameter `action` must be a Promise&#x27;);
+	}
+
+	const spinner = new Ora(options);
+	spinner.start();
+
+	action.then(
+		() =&#x3e; {
+			spinner.succeed();
+		},
+		() =&#x3e; {
+			spinner.fail();
+		}
+	);
+
+	return spinner;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Change the text.
+
+#### .color
+
+Change the spinner color.
+
+#### .<span class="apidocCodeKeywordSpan">promise</span>(action, [options|text])
+
+Starts a spinner for a promise. The spinner is stopped with `.succeed()` if the promise fulfills or with `.fail()` if it rejects
+. Returns the spinner instance.
+
+##### action
+
+Type: `Promise`
+...</pre></li>
     </ul>
 
 
